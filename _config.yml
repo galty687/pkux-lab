@@ -19,34 +19,20 @@ default_lang: "cn"
 
 # Homepage display settings
 # Configure how many items to show in each section on the homepage
-# 
-# USAGE EXAMPLES:
-# - For 1 row of content: set count to 3
-# - For 2 rows of content: set count to 6  
-# - For 3 rows of content: set count to 9
-# - For custom layout: set any number (grid will auto-adjust)
-#
 homepage:
   featured_research_count: 3  # Number of featured research projects to show (default: 3 for one row)
-                              # Recommended values: 3 (1 row), 6 (2 rows), 9 (3 rows)
   latest_news_count: 3        # Number of latest news items to show (default: 3 for one row)
-                              # Recommended values: 3 (1 row), 6 (2 rows), 9 (3 rows)
 
-# Build settings
+# Build settings - GitHub Pages compatible
 markdown: kramdown
 highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
-# Pagination for news
+# Pagination for news - GitHub Pages compatible
 paginate: 5
 paginate_path: "/news/page/:num/"
-pagination:
-  enabled: true
-  per_page: 5
-  permalink: '/page/:num/'
-  title: ':title - page :num'
-  limit: 0
-  sort_field: 'date'
-  sort_reverse: true
 
 # Social media and contact
 twitter_username: pkuxlab
@@ -90,6 +76,13 @@ defaults:
       type: "publications"
     values:
       layout: "publication"
+
+# GitHub Pages compatible plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate
 
 # Exclude from processing
 exclude:

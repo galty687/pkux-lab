@@ -1,13 +1,14 @@
 source "https://rubygems.org"
 
 # Use GitHub Pages gem which includes Jekyll and all necessary dependencies
-gem "github-pages", "~> 230", group: :jekyll_plugins
+gem "github-pages", "~> 232", group: :jekyll_plugins
 
 # Jekyll plugins that work with GitHub Pages
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
   gem "jekyll-sitemap", "~> 1.3"
   gem "jekyll-seo-tag", "~> 2.6"
+  gem "jekyll-paginate", "~> 1.1"
 end
 
 # Windows and JRuby compatibility
