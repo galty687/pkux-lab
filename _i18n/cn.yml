@@ -1,0 +1,69 @@
+header:
+  tagline: "信息体验实验室"
+
+nav:
+  home: "首页"
+  about: "关于我们"
+  research: "研究方向"
+  team: "团队成员"
+  publications: "学术成果"
+  news: "新闻动态"
+  contact: "联系我们"
+
+footer:
+  description: "北京大学信息体验实验室 - 为用户在产品使用信息需求的整个过程中创造更好的信息体验。"
+  quick_links: "快速链接"
+  contact: "联系方式"
+  follow_us: "关注我们"
+  rights: "版权所有。"
+
+home:
+  hero:
+    title: "PKUX 实验室"
+    subtitle: "北京大学信息体验实验室"
+    description: "为用户在产品使用信息需求的整个过程中创造更好的信息体验。"
+    cta: "探索我们的研究"
+  featured_research:
+    title: "特色研究"
+    subtitle: "发现我们的最新项目和创新成果"
+  latest_news:
+    title: "最新动态"
+    subtitle: "了解我们的最新活动"
+    view_all: "查看所有新闻"
+
+about:
+  title: "关于 PKUX 实验室"
+  mission: "我们的使命"
+  vision: "我们的愿景"
+  values: "我们的价值观"
+
+research:
+  title: "研究领域"
+  ongoing: "在研项目"
+  completed: "已完成项目"
+  featured: "特色项目"
+
+team:
+  title: "我们的团队"
+  faculty: "教师"
+  students: "学生"
+  alumni: "校友"
+
+publications:
+  title: "学术成果"
+  journals: "期刊论文"
+  conferences: "会议论文"
+  books: "图书章节"
+  patents: "专利"
+
+news:
+  title: "新闻动态"
+  recent: "最新消息"
+  events: "即将举行的活动"
+
+contact:
+  title: "联系我们"
+  address: "地址"
+  phone: "电话"
+  email: "邮箱"
+  office_hours: "办公时间"

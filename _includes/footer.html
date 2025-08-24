@@ -1,0 +1,45 @@
+<footer class="site-footer">
+    <div class="wrapper">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>PKUX LAB</h3>
+                <p>Peking University Information Experience Lab - Creating better information experience for the whole journey when users need information for their usage of products.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="{{ '/about' | relative_url }}">About</a></li>
+                    <li><a href="{{ '/research' | relative_url }}">Research</a></li>
+                    <li><a href="{{ '/team' | relative_url }}">Team</a></li>
+                    <li><a href="{{ '/publications' | relative_url }}">Publications</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>
+                    Peking University<br>
+                    Beijing, China<br>
+                    Email: contact@pkuxlab.org
+                </p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    {% if site.github_username %}
+                        <a href="https://github.com/{{ site.github_username }}">GitHub</a>
+                    {% endif %}
+                    {% if site.twitter_username %}
+                        <a href="https://twitter.com/{{ site.twitter_username }}">Twitter</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; {{ 'now' | date: "%Y" }} PKUX LAB. All rights reserved.</p>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{% if site.lang %}{{ site.lang }}{% else %}{{ site.default_lang }}{% endif %}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>{% if page.title %}{{ page.title | escape }} - {% endif %}{{ site.title | escape }}</title>
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+</head>
+<body>
+    {% include header.html %}
+    
+    <main class="page-content" aria-label="Content">
+        <div class="wrapper">
+            {{ content }}
+        </div>
+    </main>
+    
+    {% include footer.html %}
+    
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>

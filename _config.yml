@@ -1,0 +1,108 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+
+title: PKUX LAB
+email: contact@pkuxlab.org
+description: >- # this means to ignore newlines until "baseurl:"
+  Peking University Information Experience Lab - Creating better information 
+  experience for the whole journey when users need information for their usage of products.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://pkuxlab.github.io" # the base hostname & protocol for your site
+
+# Site settings
+languages: ["cn", "en"]
+default_lang: "cn"
+
+# Homepage display settings
+# Configure how many items to show in each section on the homepage
+# 
+# USAGE EXAMPLES:
+# - For 1 row of content: set count to 3
+# - For 2 rows of content: set count to 6  
+# - For 3 rows of content: set count to 9
+# - For custom layout: set any number (grid will auto-adjust)
+#
+homepage:
+  featured_research_count: 3  # Number of featured research projects to show (default: 3 for one row)
+                              # Recommended values: 3 (1 row), 6 (2 rows), 9 (3 rows)
+  latest_news_count: 3        # Number of latest news items to show (default: 3 for one row)
+                              # Recommended values: 3 (1 row), 6 (2 rows), 9 (3 rows)
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Pagination for news
+paginate: 5
+paginate_path: "/news/page/:num/"
+pagination:
+  enabled: true
+  per_page: 5
+  permalink: '/page/:num/'
+  title: ':title - page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+
+# Social media and contact
+twitter_username: pkuxlab
+github_username: pkuxlab
+
+# Collections
+collections:
+  team:
+    output: true
+    permalink: /:collection/:name/
+  projects:
+    output: true
+    permalink: /:collection/:name/
+  publications:
+    output: true
+    permalink: /:collection/:name/
+  news:
+    output: true
+    permalink: /news/:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "news"
+    values:
+      layout: "post"
+      permalink: /news/:year/:month/:day/:title/
+  - scope:
+      path: ""
+      type: "team"
+    values:
+      layout: "team-member"
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+  - scope:
+      path: ""
+      type: "publications"
+    values:
+      layout: "publication"
+
+# Exclude from processing
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - CONTENT_PLANNING.md
+  - _news/README.md
+  - _news/BILINGUAL_STRUCTURE.md

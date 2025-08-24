@@ -1,0 +1,69 @@
+header:
+  tagline: "Information Experience Lab"
+
+nav:
+  home: "Home"
+  about: "About"
+  research: "Research"
+  team: "Team"
+  publications: "Publications"
+  news: "News"
+  contact: "Contact"
+
+footer:
+  description: "Peking University Information Experience Lab - Creating better information experience for the whole journey when users need information for their usage of products."
+  quick_links: "Quick Links"
+  contact: "Contact"
+  follow_us: "Follow Us"
+  rights: "All rights reserved."
+
+home:
+  hero:
+    title: "PKUX LAB"
+    subtitle: "Peking University Information Experience Lab"
+    description: "Creating better information experience for the whole journey when users need information for their usage of products."
+    cta: "Explore Our Research"
+  featured_research:
+    title: "Featured Research"
+    subtitle: "Discover our latest projects and innovations"
+  latest_news:
+    title: "Latest News"
+    subtitle: "Stay updated with our recent activities"
+    view_all: "View All News"
+
+about:
+  title: "About PKUX LAB"
+  mission: "Our Mission"
+  vision: "Our Vision"
+  values: "Our Values"
+
+research:
+  title: "Research Areas"
+  ongoing: "Ongoing Projects"
+  completed: "Completed Projects"
+  featured: "Featured Projects"
+
+team:
+  title: "Our Team"
+  faculty: "Faculty"
+  students: "Students"
+  alumni: "Alumni"
+
+publications:
+  title: "Publications"
+  journals: "Journal Articles"
+  conferences: "Conference Papers"
+  books: "Book Chapters"
+  patents: "Patents"
+
+news:
+  title: "News & Events"
+  recent: "Recent News"
+  events: "Upcoming Events"
+
+contact:
+  title: "Contact Us"
+  address: "Address"
+  phone: "Phone"
+  email: "Email"
+  office_hours: "Office Hours"

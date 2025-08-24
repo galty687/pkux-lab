@@ -1,0 +1,184 @@
+---
+layout: default
+---
+
+<div class="home">
+    <!-- Modern Hero Section -->
+    <section class="hero-modern">
+        <div class="hero-background">
+            <div class="geometric-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="hero-content">
+                <div class="hero-main">
+                    {% if page.lang == 'en' %}
+                        <div class="hero-badge">Peking University</div>
+                        <h1 class="hero-title">
+                            <span class="title-main">PKUX</span>
+                            <span class="title-sub">LAB</span>
+                        </h1>
+                        <h2 class="hero-subtitle">Information Experience Lab</h2>
+                        <p class="hero-description">Creating better information experience for the whole journey when users need information for their usage of products, advancing human-computer interaction through cutting-edge research.</p>
+                        <div class="hero-actions">
+                            <a href="{{ '/en/research' | relative_url }}" class="cta-primary">Explore Research</a>
+                            <a href="{{ '/en/team' | relative_url }}" class="cta-secondary">Meet Our Team</a>
+                        </div>
+                    {% else %}
+                        <div class="hero-badge">北京大学</div>
+                        <h1 class="hero-title">
+                            <span class="title-main">PKUX</span>
+                            <span class="title-sub">实验室</span>
+                        </h1>
+                        <h2 class="hero-subtitle">信息体验实验室</h2>
+                        <p class="hero-description">为用户在产品使用信息需求的整个过程中创造更好的信息体验，通过前沿研究推动人机交互领域的发展。</p>
+                        <div class="hero-actions">
+                            <a href="{{ '/research' | relative_url }}" class="cta-primary">探索研究</a>
+                            <a href="{{ '/team' | relative_url }}" class="cta-secondary">了解团队</a>
+                        </div>
+                    {% endif %}
+                    {% endif %}
+                </div>
+                <div class="hero-visual">
+                    <div class="stats-container">
+                        <div class="stat-item">
+                            <div class="stat-number">50+</div>
+                            {% if page.lang == 'en' %}
+                                <div class="stat-label">Research Projects</div>
+                            {% else %}
+                                <div class="stat-label">研究项目</div>
+                            {% endif %}
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100+</div>
+                            {% if page.lang == 'en' %}
+                                <div class="stat-label">Publications</div>
+                            {% else %}
+                                <div class="stat-label">学术论文</div>
+                            {% endif %}
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">15+</div>
+                            {% if page.lang == 'en' %}
+                                <div class="stat-label">Team Members</div>
+                            {% else %}
+                                <div class="stat-label">团队成员</div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Research Section -->
+    <section class="featured-research">
+        <div class="wrapper">
+            <div class="section-header">
+                {% if page.lang == 'en' %}
+                    <div class="section-badge">Research Areas</div>
+                    <h2>Featured Research</h2>
+                    <p>Discover our latest projects and innovations in information experience design, human-computer interaction, and beyond</p>
+                {% else %}
+                    <div class="section-badge">研究领域</div>
+                    <h2>特色研究</h2>
+                    <p>发现我们在信息体验设计、人机交互等领域的最新项目和创新成果</p>
+                {% endif %}
+            </div>
+            <div class="research-grid-modern">
+                {% assign featured_count = site.homepage.featured_research_count | default: 3 %}
+                {% assign featured_projects = site.projects | where: "featured", true | limit: featured_count %}
+                {% for project in featured_projects %}
+                    <div class="research-card-modern">
+                        <div class="card-header">
+                            {% if project.image %}
+                                <div class="card-image">
+                                    <img src="{{ project.image | relative_url }}" alt="{{ project.title }}" />
+                                    <div class="card-overlay"></div>
+                                </div>
+                            {% else %}
+                                <div class="card-placeholder">
+                                    <div class="placeholder-icon">🔬</div>
+                                </div>
+                            {% endif %}
+                        </div>
+                        <div class="card-content">
+                            <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
+                            <p>{{ project.excerpt | strip_html | truncate: 120 }}</p>
+                            <div class="card-footer">
+                                <a href="{{ project.url | relative_url }}" class="learn-more">
+                                    {% if page.lang == 'en' %}
+                                        Learn More
+                                    {% else %}
+                                        了解详情
+                                    {% endif %}
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest News Section -->
+    <section class="latest-news">
+        <div class="wrapper">
+            <div class="section-header">
+                {% if page.lang == 'en' %}
+                    <div class="section-badge">Lab Updates</div>
+                    <h2>Latest News</h2>
+                    <p>Stay updated with our recent activities, research outcomes, and academic exchanges</p>
+                {% else %}
+                    <div class="section-badge">实验室动态</div>
+                    <h2>最新动态</h2>
+                    <p>了解我们的最新活动、研究成果和学术交流</p>
+                {% endif %}
+            </div>
+            <div class="news-grid-modern">
+                {% assign news_count = site.homepage.latest_news_count | default: 3 %}
+                {% if page.lang == 'en' %}
+                    {% assign filtered_posts = site.news | where: "lang", "en" %}
+                {% else %}
+                    {% assign filtered_posts = site.news | where: "lang", "cn" %}
+                {% endif %}
+                {% for post in filtered_posts %}
+                    {% if forloop.index <= news_count %}
+                    <article class="news-card-modern">
+                        <div class="news-date">
+                            <div class="date-day">{{ post.date | date: "%d" }}</div>
+                            <div class="date-month">{{ post.date | date: "%b" }}</div>
+                        </div>
+                        <div class="news-content">
+                            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                            <p>{{ post.excerpt | strip_html | truncate: 100 }}</p>
+                            <a href="{{ post.url | relative_url }}" class="news-link">
+                                {% if page.lang == 'en' %}
+                                    Read More
+                                {% else %}
+                                    阅读更多
+                                {% endif %}
+                            </a>
+                        </div>
+                    </article>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="section-footer">
+                {% if page.lang == 'en' %}
+                    <a href="{{ '/en/news' | relative_url }}" class="view-all-modern">View All News →</a>
+                {% else %}
+                    <a href="{{ '/news' | relative_url }}" class="view-all-modern">查看所有新闻 →</a>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+
+    {{ content }}
+</div>
